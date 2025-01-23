@@ -1,24 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { img1, img2, img3, img4 } from '../assets/img';
 
 const images = [
   {
-    src: {img1},
+    src: img1,
     text: 'Slide 1: Captivating Beauty',
   },
   {
-    src: {img2},
+    src: img2,
     text: 'Slide 2: Unparalleled Elegance',
   },
   {
-    src: {img4},
+    src: img3,
     text: 'Slide 3: Infinite Possibilities',
+  },
+  {
+    src: img4,
+    text: 'Slide 4: The last slide here',
   },
 ];
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Automatically switch slides every 0.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // 0.5 seconds
+
+    return () => clearInterval(interval); // Clear interval on component unmount
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -29,9 +42,9 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
+    <div className="relative w-full max-w-4xl mx-auto overflow-hidden h-96">
       {/* Slider Container */}
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex justify-center items-center h-full">
         <AnimatePresence>
           {images.map((image, index) =>
             index === currentIndex ? (
@@ -46,7 +59,7 @@ const ImageSlider = () => {
                 <img
                   src={image.src}
                   alt={image.text}
-                  className="w-full h-60 sm:h-80 lg:h-96 object-cover rounded-lg"
+                  className="w-full h-full object-contain rounded-lg"
                 />
                 <motion.div
                   className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"
@@ -85,7 +98,7 @@ const ImageSlider = () => {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? 'bg-white' : 'bg-gray-400'
+              index === currentIndex ? 'bg-gray-200' : 'bg-gray-400'
             }`}
           ></button>
         ))}
