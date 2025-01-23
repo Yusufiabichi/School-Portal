@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import
+import { img1, img2, img3, img4 } from '../assets/img';
 
 const images = [
   {
-    src: 'https://unsplash.com/photos/apple-macbook-beside-computer-mouse-on-table-9l_326FISzk',
+    src: {img1},
     text: 'Slide 1: Captivating Beauty',
   },
   {
-    src: 'https://unsplash.com/photos/gray-and-black-laptop-computer-on-surface-Im7lZjxeLhg',
+    src: {img2},
     text: 'Slide 2: Unparalleled Elegance',
   },
   {
-    src: 'https://unsplash.com/photos/apple-macbook-beside-computer-mouse-on-table-9l_326FISzk',
+    src: {img4},
     text: 'Slide 3: Infinite Possibilities',
   },
 ];
