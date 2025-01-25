@@ -8,7 +8,7 @@ const Form = () => {
 
             {/* <h3>Fill all the forms appropriately</h3> */}
             <label htmlFor="surname"
-            className="pt-5 text-bold text-coral-red text-2xl"
+            className="pt-5 ml-3 text-bold text-coral-red text-2xl"
             >
                 Surname:</label>
             <input type="text" for="surname" name="surname" id="surname" placeholder="surname" 
@@ -16,7 +16,7 @@ const Form = () => {
 
             
             <label htmlFor="surname"
-            className="pt-5 text-bold text-coral-red text-2xl"
+            className="pt-5 ml-3 text-bold text-coral-red text-2xl"
             >
                 Other Names:</label>
             <input type="text" for="othernames" name="othernmes" id="othernmes" placeholder="othernmes" 
@@ -24,11 +24,11 @@ const Form = () => {
 
 
             <label htmlFor="place-of-birth"
-            className="pt-5 text-bold text-coral-red text-2xl"
+            className="pt-5 ml-3 text-bold text-coral-red text-2xl"
             >
                 Place of Birth:</label>
             <input type="text" for="place-of-birth" name="place-of-birth" id="place-of-birth" placeholder="place-of-birth" 
-            className="p-3 ml-3 border-rounded-full border-slate-gray"/>
+            className=" input p-3 ml-3 border-rounded-full border-slate-gray"/>
         </div>
     </section>
   )
