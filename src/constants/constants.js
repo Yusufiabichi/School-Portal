@@ -1,10 +1,15 @@
-export const FormData = [
+export const Register = [
     { label: "Surname", placeholder: "" },
     { label: "First Name", placeholder: "First Name" },
     { label: "Middle Name", placeholder: "Middle Name" },
     { label: "Address", placeholder: "Residential Address" },
-    { label: "State", placeholder: "State of Origin" },
+    { label: "State of Origin", placeholder: "State of Origin" },
+    { label: "State of Resident", placeholder: "State of Resident" },
 ];
+
+export const Login [
+    { label: "" }
+]
 
 export const shoes = [
     {
