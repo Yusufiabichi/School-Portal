@@ -25,7 +25,8 @@ const Nav = () => {
 
         {/* Nav Links */}
         <div
-          className={`absolute lg:static top-14 left-0 z-10 lg:flex lg:space-x-6 w-full lg:w-auto bg-blue-600 lg:bg-transparent transition-all duration-300 ease-in-out overflow-hidden ${
+          className={`absolute lg:static top-14 left-0 z-10 lg:flex lg:space-x-6 w-full lg:w-auto 
+            bg-blue-600 lg:bg-transparent transition-all duration-300 ease-in-out overflow-hidden ${
             isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
