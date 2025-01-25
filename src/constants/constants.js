@@ -10,11 +10,26 @@ export const Register = [
     { label: "Local Government of Resident", placeholder: "LGA of Resident" },
     { label: "Email Address", placeholder: "Enter your email" },
     { label: "Phone No.", placeholder: "Phone No." },
+];
+
+export const Guardian = [
     { label: "Guardian's Phone Number", placeholder: "Guardian's Phone Number" },
     { label: "Guardian's Name", placeholder: "Guardian's Name" },
     { label: "Guardian's Address", placeholder: "Guardian's Address" }
-
 ];
+
+export const AcademicRecords = [
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""},
+    { label: "", placeholder: ""}
+]
 
 export const Login = [
     { label: "Username", placeholder: "Enter Your Username" },
