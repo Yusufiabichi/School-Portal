@@ -144,7 +144,7 @@ const GuardianInformation = ({ formData, handleChange }) => (
   </div>
 );
 
-const RegistrationPage = () => {
+const Form = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -221,4 +221,4 @@ const RegistrationPage = () => {
   );
 };
 
-export default RegistrationPage;
+export default Form;
