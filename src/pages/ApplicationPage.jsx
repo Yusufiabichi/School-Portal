@@ -14,7 +14,8 @@ const PersonalInformation = ({ formData, handleChange }) => (
         value={formData.fullName}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
     <div>
@@ -28,7 +29,8 @@ const PersonalInformation = ({ formData, handleChange }) => (
         value={formData.email}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
     <div>
@@ -42,9 +44,12 @@ const PersonalInformation = ({ formData, handleChange }) => (
         value={formData.phoneNumber}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
+    
+    
   </div>
 );
 
@@ -62,7 +67,8 @@ const AcademicRecords = ({ formData, handleChange }) => (
         value={formData.highSchoolName}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
     <div>
@@ -76,7 +82,8 @@ const AcademicRecords = ({ formData, handleChange }) => (
         value={formData.graduationYear}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
     <div>
@@ -90,7 +97,8 @@ const AcademicRecords = ({ formData, handleChange }) => (
         value={formData.gpa}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
   </div>
@@ -110,7 +118,8 @@ const GuardianInformation = ({ formData, handleChange }) => (
         value={formData.guardianName}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none 
+        focus:ring-2 focus:ring-blue-500"
       />
     </div>
     <div>
@@ -124,7 +133,8 @@ const GuardianInformation = ({ formData, handleChange }) => (
         value={formData.guardianPhone}
         onChange={handleChange}
         required
-        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none 
+        focus:ring-2 focus:ring-blue-500"
       />
     </div>
     <div>
