@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    gender: '',
-    dob: '',
-    address: '',
-    course: '',
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    gender: "",
+    dob: "",
+    address: "",
+    course: "",
     paymentProof: null,
   });
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === 'paymentProof') {
+    if (name === "paymentProof") {
       setFormData({ ...formData, [name]: files[0] });
     } else {
       setFormData({ ...formData, [name]: value });
@@ -23,17 +23,20 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
+    console.log("Form Data Submitted:", formData);
     // Add form submission logic here (e.g., API call to backend)
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-2xl w-full bg-white p-8 shadow-xl rounded-2xl">
-        <h1 className="text-2xl font-bold text-center mb-6">School Admission Form</h1>
+        <h1 className="text-2xl font-bold text-center mb-6">Register</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="fullName"
+              className="block text-sm font-medium text-gray-700"
+            >
               Full Name
             </label>
             <input
@@ -48,7 +51,10 @@ const RegistrationPage = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Email Address
             </label>
             <input
@@ -63,7 +69,10 @@ const RegistrationPage = () => {
           </div>
 
           <div>
-            <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="phoneNumber"
+              className="block text-sm font-medium text-gray-700"
+            >
               Phone Number
             </label>
             <input
@@ -78,7 +87,10 @@ const RegistrationPage = () => {
           </div>
 
           <div>
-            <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="gender"
+              className="block text-sm font-medium text-gray-700"
+            >
               Gender
             </label>
             <select
@@ -96,7 +108,10 @@ const RegistrationPage = () => {
           </div>
 
           <div>
-            <label htmlFor="dob" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="dob"
+              className="block text-sm font-medium text-gray-700"
+            >
               Date of Birth
             </label>
             <input
@@ -111,7 +126,10 @@ const RegistrationPage = () => {
           </div>
 
           <div>
-            <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="address"
+              className="block text-sm font-medium text-gray-700"
+            >
               Address
             </label>
             <textarea
@@ -126,22 +144,33 @@ const RegistrationPage = () => {
           </div>
 
           <div>
-            <label htmlFor="course" className="block text-sm font-medium text-gray-700">
-              Course of Interest
+            <label
+              htmlFor="hear-about-us"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Where do you hear about us?
             </label>
-            <input
-              type="text"
-              name="course"
-              id="course"
-              value={formData.course}
+            <select
+              name="hear-about-us"
+              id="hear-about-us"
+              value={formData.hearAbotUs}
               onChange={handleChange}
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            >
+              <option value="">Select</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Friend">Friend</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
 
           <div>
-            <label htmlFor="paymentProof" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="paymentProof"
+              className="block text-sm font-medium text-gray-700"
+            >
               Upload Payment Proof
             </label>
             <input

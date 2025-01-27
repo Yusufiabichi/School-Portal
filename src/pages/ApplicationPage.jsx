@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const PersonalInformation = ({ formData, handleChange }) => (
   <div className="space-y-6">
     <h2 className="text-xl font-bold">Personal Information</h2>
     <div>
-      <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+      <label
+        htmlFor="fullName"
+        className="block text-sm font-medium text-gray-700"
+      >
         Full Name
       </label>
       <input
@@ -19,7 +22,10 @@ const PersonalInformation = ({ formData, handleChange }) => (
       />
     </div>
     <div>
-      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+      <label
+        htmlFor="email"
+        className="block text-sm font-medium text-gray-700"
+      >
         Email Address
       </label>
       <input
@@ -34,7 +40,10 @@ const PersonalInformation = ({ formData, handleChange }) => (
       />
     </div>
     <div>
-      <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
+      <label
+        htmlFor="phoneNumber"
+        className="block text-sm font-medium text-gray-700"
+      >
         Phone Number
       </label>
       <input
@@ -48,8 +57,28 @@ const PersonalInformation = ({ formData, handleChange }) => (
         focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
-    
-    
+
+    <div>
+      <label
+        htmlFor="course-of-interest"
+        className="block text-sm font-medium text-gray-700"
+      >
+        Course Of Interest
+      </label>
+      <select
+        name="course-of-interest"
+        id="course-of-interest"
+        value={formData.courseOfInterest}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <option value="">Select Course</option>
+        <option value="Public-health">Public Health</option>
+        <option value="Midwifery">Midwifery</option>
+        <option value="CHEW">CHEW</option>
+      </select>
+    </div>
   </div>
 );
 
@@ -57,10 +86,14 @@ const AcademicRecords = ({ formData, handleChange }) => (
   <div className="space-y-6">
     <h2 className="text-xl font-bold">Academic Records</h2>
     <div>
-      <label htmlFor="highSchoolName" className="block text-sm font-medium text-gray-700">
-        High School Name
+      <label
+        htmlFor="highSchoolName"
+        className="block text-sm font-medium text-gray-700"
+      >
+        Secondary School Attended
       </label>
       <input
+        placeholder=" Enter School Name"
         type="text"
         name="highSchoolName"
         id="highSchoolName"
@@ -72,11 +105,14 @@ const AcademicRecords = ({ formData, handleChange }) => (
       />
     </div>
     <div>
-      <label htmlFor="graduationYear" className="block text-sm font-medium text-gray-700">
+      <label
+        htmlFor="graduationYear"
+        className="block text-sm font-medium text-gray-700"
+      >
         Graduation Year
       </label>
       <input
-        type="number"
+        type="tel"
         name="graduationYear"
         id="graduationYear"
         value={formData.graduationYear}
@@ -86,12 +122,36 @@ const AcademicRecords = ({ formData, handleChange }) => (
         focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
+
+    <div>
+      <label
+        htmlFor="SSCE-Exam"
+        className="block text-sm font-medium text-gray-700"
+      >
+        SSCE Examination
+      </label>
+      <select
+        name="SSCE-Exam"
+        id="SSCE-Exam"
+        value={formData.ssceExam}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <option value="">Select</option>
+        <option value="NECO">NECO</option>
+        <option value="WaEC">WaEC</option>
+        <option value="JAMB">JAMB</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
     <div>
       <label htmlFor="gpa" className="block text-sm font-medium text-gray-700">
-        GPA
+        No. of Credits/ Score
       </label>
       <input
-        type="text"
+        type="tel"
         name="gpa"
         id="gpa"
         value={formData.gpa}
@@ -107,8 +167,12 @@ const AcademicRecords = ({ formData, handleChange }) => (
 const GuardianInformation = ({ formData, handleChange }) => (
   <div className="space-y-6">
     <h2 className="text-xl font-bold">Parent/Guardian Information</h2>
+
     <div>
-      <label htmlFor="guardianName" className="block text-sm font-medium text-gray-700">
+      <label
+        htmlFor="guardianName"
+        className="block text-sm font-medium text-gray-700"
+      >
         Guardian's Name
       </label>
       <input
@@ -122,8 +186,12 @@ const GuardianInformation = ({ formData, handleChange }) => (
         focus:ring-2 focus:ring-blue-500"
       />
     </div>
+
     <div>
-      <label htmlFor="guardianPhone" className="block text-sm font-medium text-gray-700">
+      <label
+        htmlFor="guardianPhone"
+        className="block text-sm font-medium text-gray-700"
+      >
         Guardian's Phone Number
       </label>
       <input
@@ -137,34 +205,43 @@ const GuardianInformation = ({ formData, handleChange }) => (
         focus:ring-2 focus:ring-blue-500"
       />
     </div>
+
     <div>
-      <label htmlFor="guardianRelation" className="block text-sm font-medium text-gray-700">
-        Relationship to Candidate
+      <label
+        htmlFor="SSCE-Exam"
+        className="block text-sm font-medium text-gray-700"
+      >
+        SSCE Examination
       </label>
-      <input
-        type="text"
-        name="guardianRelation"
-        id="guardianRelation"
-        value={formData.guardianRelation}
+      <select
+        name="SSCE-Exam"
+        id="SSCE-Exam"
+        value={formData.ssceExam}
         onChange={handleChange}
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+      >
+        <option value="">Select</option>
+        <option value="NECO">NECO</option>
+        <option value="WaEC">WaEC</option>
+        <option value="JAMB">JAMB</option>
+        <option value="Other">Other</option>
+      </select>
     </div>
   </div>
 );
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    highSchoolName: '',
-    graduationYear: '',
-    gpa: '',
-    guardianName: '',
-    guardianPhone: '',
-    guardianRelation: '',
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    highSchoolName: "",
+    graduationYear: "",
+    gpa: "",
+    guardianName: "",
+    guardianPhone: "",
+    guardianRelation: "",
   });
 
   const [currentSection, setCurrentSection] = useState(1);
@@ -184,18 +261,32 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
+    console.log("Form Data Submitted:", formData);
     // Add form submission logic here (e.g., API call to backend)
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-3xl w-full bg-white p-8 shadow-xl rounded-2xl">
-        <h1 className="text-2xl font-bold text-center mb-6">School Admission Form</h1>
+        <h1 className="text-2xl font-bold text-center mb-6">
+          School Admission Form
+        </h1>
         <form onSubmit={handleSubmit} className="space-y-6">
-          {currentSection === 1 && <PersonalInformation formData={formData} handleChange={handleChange} />}
-          {currentSection === 2 && <AcademicRecords formData={formData} handleChange={handleChange} />}
-          {currentSection === 3 && <GuardianInformation formData={formData} handleChange={handleChange} />}
+          {currentSection === 1 && (
+            <PersonalInformation
+              formData={formData}
+              handleChange={handleChange}
+            />
+          )}
+          {currentSection === 2 && (
+            <AcademicRecords formData={formData} handleChange={handleChange} />
+          )}
+          {currentSection === 3 && (
+            <GuardianInformation
+              formData={formData}
+              handleChange={handleChange}
+            />
+          )}
 
           <div className="flex justify-between items-center mt-6">
             {currentSection > 1 && (
