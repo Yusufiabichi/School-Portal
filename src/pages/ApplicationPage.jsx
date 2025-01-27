@@ -221,4 +221,4 @@ const RegistrationPage = () => {
   );
 };
 
-export default ApplicationPage;
+export default RegistrationPage;

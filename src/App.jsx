@@ -1,19 +1,16 @@
-import './index.css';
-import Form from './Sections/Form';
-import ImageSlider from './Sections/ImageSlider';
-import Nav from './Sections/Nav';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <div className="flex justify-center min-h-screen bg-gray-100">
-        {/* <h1 className="text-4xl font-bold text-blue-600 test">Hello, Yusufia CSS!</h1> */}
-        <Form/>
-      </div>
-
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App
