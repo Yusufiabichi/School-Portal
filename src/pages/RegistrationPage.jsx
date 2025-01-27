@@ -8,8 +8,9 @@ const RegistrationPage = () => {
     gender: "",
     dob: "",
     address: "",
-    course: "",
-    paymentProof: null,
+    hearAbotUs: "",
+    // course: "",
+    // paymentProof: null,
   });
 
   const handleChange = (e) => {
@@ -40,6 +41,7 @@ const RegistrationPage = () => {
               Full Name
             </label>
             <input
+              placeholder="Enter your name"
               type="text"
               name="fullName"
               id="fullName"
@@ -58,6 +60,7 @@ const RegistrationPage = () => {
               Email Address
             </label>
             <input
+              placeholder="youremail@example.com"
               type="email"
               name="email"
               id="email"
@@ -76,6 +79,7 @@ const RegistrationPage = () => {
               Phone Number
             </label>
             <input
+              placeholder="07068538000"
               type="tel"
               name="phoneNumber"
               id="phoneNumber"
@@ -133,6 +137,7 @@ const RegistrationPage = () => {
               Address
             </label>
             <textarea
+              placeholder="Enter your Address"
               name="address"
               id="address"
               value={formData.address}
@@ -145,14 +150,14 @@ const RegistrationPage = () => {
 
           <div>
             <label
-              htmlFor="hear-about-us"
+              htmlFor="hearAbotUs"
               className="block text-sm font-medium text-gray-700"
             >
               Where do you hear about us?
             </label>
             <select
-              name="hear-about-us"
-              id="hear-about-us"
+              name="hearAbotUs"
+              id="hearAbotUs"
               value={formData.hearAbotUs}
               onChange={handleChange}
               required
@@ -166,7 +171,7 @@ const RegistrationPage = () => {
             </select>
           </div>
 
-          <div>
+          {/* <div>
             <label
               htmlFor="paymentProof"
               className="block text-sm font-medium text-gray-700"
@@ -181,13 +186,13 @@ const RegistrationPage = () => {
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-          </div>
+          </div> */}
 
           <button
             type="submit"
             className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Submit Application
+            Register
           </button>
         </form>
       </div>

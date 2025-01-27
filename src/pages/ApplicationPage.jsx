@@ -208,23 +208,42 @@ const GuardianInformation = ({ formData, handleChange }) => (
 
     <div>
       <label
-        htmlFor="SSCE-Exam"
+        htmlFor="address"
         className="block text-sm font-medium text-gray-700"
       >
-        SSCE Examination
+        Address
+      </label>
+      <textarea
+        placeholder="Enter Guardien's Address"
+        name="address"
+        id="address"
+        value={formData.address}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <div>
+      <label
+        htmlFor="relationship"
+        className="block text-sm font-medium text-gray-700"
+      >
+        Relationship
       </label>
       <select
-        name="SSCE-Exam"
-        id="SSCE-Exam"
-        value={formData.ssceExam}
+        name="relationship"
+        id="relationship"
+        value={formData.reltionship}
         onChange={handleChange}
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <option value="">Select</option>
-        <option value="NECO">NECO</option>
-        <option value="WaEC">WaEC</option>
-        <option value="JAMB">JAMB</option>
+        <option value="Father">Father</option>
+        <option value="Mother">Mother</option>
+        <option value="Brother">Brother</option>
         <option value="Other">Other</option>
       </select>
     </div>
