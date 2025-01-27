@@ -1,24 +1,175 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const PersonalInformation = ({ formData, handleChange }) => (
+  <div className="space-y-6">
+    <h2 className="text-xl font-bold">Personal Information</h2>
+    <div>
+      <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+        Full Name
+      </label>
+      <input
+        type="text"
+        name="fullName"
+        id="fullName"
+        value={formData.fullName}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <div>
+      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+        Email Address
+      </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <div>
+      <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
+        Phone Number
+      </label>
+      <input
+        type="tel"
+        name="phoneNumber"
+        id="phoneNumber"
+        value={formData.phoneNumber}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+  </div>
+);
+
+const AcademicRecords = ({ formData, handleChange }) => (
+  <div className="space-y-6">
+    <h2 className="text-xl font-bold">Academic Records</h2>
+    <div>
+      <label htmlFor="highSchoolName" className="block text-sm font-medium text-gray-700">
+        High School Name
+      </label>
+      <input
+        type="text"
+        name="highSchoolName"
+        id="highSchoolName"
+        value={formData.highSchoolName}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <div>
+      <label htmlFor="graduationYear" className="block text-sm font-medium text-gray-700">
+        Graduation Year
+      </label>
+      <input
+        type="number"
+        name="graduationYear"
+        id="graduationYear"
+        value={formData.graduationYear}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <div>
+      <label htmlFor="gpa" className="block text-sm font-medium text-gray-700">
+        GPA
+      </label>
+      <input
+        type="text"
+        name="gpa"
+        id="gpa"
+        value={formData.gpa}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+  </div>
+);
+
+const GuardianInformation = ({ formData, handleChange }) => (
+  <div className="space-y-6">
+    <h2 className="text-xl font-bold">Parent/Guardian Information</h2>
+    <div>
+      <label htmlFor="guardianName" className="block text-sm font-medium text-gray-700">
+        Guardian's Name
+      </label>
+      <input
+        type="text"
+        name="guardianName"
+        id="guardianName"
+        value={formData.guardianName}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <div>
+      <label htmlFor="guardianPhone" className="block text-sm font-medium text-gray-700">
+        Guardian's Phone Number
+      </label>
+      <input
+        type="tel"
+        name="guardianPhone"
+        id="guardianPhone"
+        value={formData.guardianPhone}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <div>
+      <label htmlFor="guardianRelation" className="block text-sm font-medium text-gray-700">
+        Relationship to Candidate
+      </label>
+      <input
+        type="text"
+        name="guardianRelation"
+        id="guardianRelation"
+        value={formData.guardianRelation}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+  </div>
+);
+
+const RegistrationPage = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     phoneNumber: '',
-    gender: '',
-    dob: '',
-    address: '',
-    course: '',
-    paymentProof: null,
+    highSchoolName: '',
+    graduationYear: '',
+    gpa: '',
+    guardianName: '',
+    guardianPhone: '',
+    guardianRelation: '',
   });
 
+  const [currentSection, setCurrentSection] = useState(1);
+
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === 'paymentProof') {
-      setFormData({ ...formData, [name]: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleNext = () => {
+    if (currentSection < 3) setCurrentSection(currentSection + 1);
+  };
+
+  const handlePrevious = () => {
+    if (currentSection > 1) setCurrentSection(currentSection - 1);
   };
 
   const handleSubmit = (e) => {
@@ -29,141 +180,45 @@ const Form = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="max-w-2xl w-full bg-white p-8 shadow-xl rounded-2xl">
+      <div className="max-w-3xl w-full bg-white p-8 shadow-xl rounded-2xl">
         <h1 className="text-2xl font-bold text-center mb-6">School Admission Form</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
-              Full Name
-            </label>
-            <input
-              type="text"
-              name="fullName"
-              id="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {currentSection === 1 && <PersonalInformation formData={formData} handleChange={handleChange} />}
+          {currentSection === 2 && <AcademicRecords formData={formData} handleChange={handleChange} />}
+          {currentSection === 3 && <GuardianInformation formData={formData} handleChange={handleChange} />}
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          <div className="flex justify-between items-center mt-6">
+            {currentSection > 1 && (
+              <button
+                type="button"
+                onClick={handlePrevious}
+                className="py-2 px-4 bg-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              >
+                Previous
+              </button>
+            )}
 
-          <div>
-            <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              name="phoneNumber"
-              id="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            {currentSection < 3 ? (
+              <button
+                type="button"
+                onClick={handleNext}
+                className="py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                Next
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="py-2 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+              >
+                Submit Application
+              </button>
+            )}
           </div>
-
-          <div>
-            <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
-              Gender
-            </label>
-            <select
-              name="gender"
-              id="gender"
-              value={formData.gender}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="dob" className="block text-sm font-medium text-gray-700">
-              Date of Birth
-            </label>
-            <input
-              type="date"
-              name="dob"
-              id="dob"
-              value={formData.dob}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="address" className="block text-sm font-medium text-gray-700">
-              Address
-            </label>
-            <textarea
-              name="address"
-              id="address"
-              value={formData.address}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              rows="3"
-            ></textarea>
-          </div>
-
-          <div>
-            <label htmlFor="course" className="block text-sm font-medium text-gray-700">
-              Course of Interest
-            </label>
-            <input
-              type="text"
-              name="course"
-              id="course"
-              value={formData.course}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="paymentProof" className="block text-sm font-medium text-gray-700">
-              Upload Payment Proof
-            </label>
-            <input
-              type="file"
-              name="paymentProof"
-              id="paymentProof"
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Submit Application
-          </button>
         </form>
       </div>
     </div>
   );
 };
 
-export default Form;
+export default RegistrationPage;
