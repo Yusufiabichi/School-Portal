@@ -262,6 +262,7 @@ const RegistrationPage = () => {
     phoneNumber: "",
     schoolName: "",
     graduationYear: "",
+    ssceExam: "",
     creditsScore: "",
     courseOfInterest: "",
     guardianName: "",
