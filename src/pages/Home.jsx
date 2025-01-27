@@ -6,10 +6,23 @@ const Home = () => {
   return (
     <div>
         <Nav />
+        <ImageSlider />
         Welcome to Home page
-        <a href="/About">
-            <button>About Us</button>
-        </a>
+        <div>
+            <a href="/About">
+                <button>About Us</button>
+            </a>
+        </div>
+        <div>
+            <a href="/RegistrationPage">
+                <button>Register Now</button>
+            </a>
+        </div>
+        <div>
+            <a href="/ApplicationPage">
+                <button>Apply Now!</button>
+            </a>
+        </div>
     </div>
   )
 }
