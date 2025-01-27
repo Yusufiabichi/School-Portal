@@ -11,6 +11,7 @@ const PersonalInformation = ({ formData, handleChange }) => (
         Full Name
       </label>
       <input
+        placeholder="Enter your Name"
         type="text"
         name="fullName"
         id="fullName"
@@ -29,6 +30,7 @@ const PersonalInformation = ({ formData, handleChange }) => (
         Email Address
       </label>
       <input
+        placeholder="youremail@example.com"
         type="email"
         name="email"
         id="email"
@@ -47,6 +49,7 @@ const PersonalInformation = ({ formData, handleChange }) => (
         Phone Number
       </label>
       <input
+        placeholder="070XXXXXXXX"
         type="tel"
         name="phoneNumber"
         id="phoneNumber"
@@ -60,14 +63,14 @@ const PersonalInformation = ({ formData, handleChange }) => (
 
     <div>
       <label
-        htmlFor="course-of-interest"
+        htmlFor="courseOfInterest"
         className="block text-sm font-medium text-gray-700"
       >
         Course Of Interest
       </label>
       <select
-        name="course-of-interest"
-        id="course-of-interest"
+        name="courseOfInterest"
+        id="courseOfInterest"
         value={formData.courseOfInterest}
         onChange={handleChange}
         required
@@ -87,7 +90,7 @@ const AcademicRecords = ({ formData, handleChange }) => (
     <h2 className="text-xl font-bold">Academic Records</h2>
     <div>
       <label
-        htmlFor="highSchoolName"
+        htmlFor="schoolName"
         className="block text-sm font-medium text-gray-700"
       >
         Secondary School Attended
@@ -95,9 +98,9 @@ const AcademicRecords = ({ formData, handleChange }) => (
       <input
         placeholder=" Enter School Name"
         type="text"
-        name="highSchoolName"
-        id="highSchoolName"
-        value={formData.highSchoolName}
+        name="schoolName"
+        id="schoolName"
+        value={formData.schoolName}
         onChange={handleChange}
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
@@ -125,14 +128,14 @@ const AcademicRecords = ({ formData, handleChange }) => (
 
     <div>
       <label
-        htmlFor="SSCE-Exam"
+        htmlFor="ssceExam"
         className="block text-sm font-medium text-gray-700"
       >
         SSCE Examination
       </label>
       <select
-        name="SSCE-Exam"
-        id="SSCE-Exam"
+        name="ssceExam"
+        id="ssceExam"
         value={formData.ssceExam}
         onChange={handleChange}
         required
@@ -147,14 +150,14 @@ const AcademicRecords = ({ formData, handleChange }) => (
     </div>
 
     <div>
-      <label htmlFor="gpa" className="block text-sm font-medium text-gray-700">
+      <label htmlFor="creditsScore" className="block text-sm font-medium text-gray-700">
         No. of Credits/ Score
       </label>
       <input
         type="tel"
-        name="gpa"
-        id="gpa"
-        value={formData.gpa}
+        name="creditsScore"
+        id="creditsScore"
+        value={formData.creditsScore}
         onChange={handleChange}
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md 
@@ -176,6 +179,7 @@ const GuardianInformation = ({ formData, handleChange }) => (
         Guardian's Name
       </label>
       <input
+        placeholder="Guardian's name"
         type="text"
         name="guardianName"
         id="guardianName"
@@ -195,6 +199,7 @@ const GuardianInformation = ({ formData, handleChange }) => (
         Guardian's Phone Number
       </label>
       <input
+        placeholder="070XXXXXXXX"
         type="tel"
         name="guardianPhone"
         id="guardianPhone"
@@ -208,16 +213,16 @@ const GuardianInformation = ({ formData, handleChange }) => (
 
     <div>
       <label
-        htmlFor="address"
+        htmlFor="guardianAddress"
         className="block text-sm font-medium text-gray-700"
       >
         Address
       </label>
       <textarea
         placeholder="Enter Guardien's Address"
-        name="address"
-        id="address"
-        value={formData.address}
+        name="guardianAddress"
+        id="guardianAddress"
+        value={formData.guardianAddress}
         onChange={handleChange}
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -227,15 +232,15 @@ const GuardianInformation = ({ formData, handleChange }) => (
 
     <div>
       <label
-        htmlFor="relationship"
+        htmlFor="guardianRelation"
         className="block text-sm font-medium text-gray-700"
       >
         Relationship
       </label>
       <select
-        name="relationship"
-        id="relationship"
-        value={formData.reltionship}
+        name="guardianRelation"
+        id="guardianRelation"
+        value={formData.guardianRelation}
         onChange={handleChange}
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -255,11 +260,13 @@ const RegistrationPage = () => {
     fullName: "",
     email: "",
     phoneNumber: "",
-    highSchoolName: "",
+    schoolName: "",
     graduationYear: "",
-    gpa: "",
+    creditsScore: "",
+    courseOfInterest: "",
     guardianName: "",
     guardianPhone: "",
+    guardianAddress: "",
     guardianRelation: "",
   });
 
