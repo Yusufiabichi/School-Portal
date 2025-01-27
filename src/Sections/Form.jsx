@@ -144,7 +144,7 @@ const GuardianInformation = ({ formData, handleChange }) => (
   </div>
 );
 
-const Form = () => {
+const RegistrationPage = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -157,19 +157,9 @@ const Form = () => {
     guardianRelation: '',
   });
 
-  const [currentSection, setCurrentSection] = useState(1);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-
-  const handleNext = () => {
-    if (currentSection < 3) setCurrentSection(currentSection + 1);
-  };
-
-  const handlePrevious = () => {
-    if (currentSection > 1) setCurrentSection(currentSection - 1);
   };
 
   const handleSubmit = (e) => {
@@ -183,37 +173,16 @@ const Form = () => {
       <div className="max-w-3xl w-full bg-white p-8 shadow-xl rounded-2xl">
         <h1 className="text-2xl font-bold text-center mb-6">School Admission Form</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
-          {currentSection === 1 && <PersonalInformation formData={formData} handleChange={handleChange} />}
-          {currentSection === 2 && <AcademicRecords formData={formData} handleChange={handleChange} />}
-          {currentSection === 3 && <GuardianInformation formData={formData} handleChange={handleChange} />}
-
-          <div className="flex justify-between items-center mt-6">
-            {currentSection > 1 && (
-              <button
-                type="button"
-                onClick={handlePrevious}
-                className="py-2 px-4 bg-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
-              >
-                Previous
-              </button>
-            )}
-
-            {currentSection < 3 ? (
-              <button
-                type="button"
-                onClick={handleNext}
-                className="py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Next
-              </button>
-            ) : (
-              <button
-                type="submit"
-                className="py-2 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
-              >
-                Submit Application
-              </button>
-            )}
+          <PersonalInformation formData={formData} handleChange={handleChange} />
+          <AcademicRecords formData={formData} handleChange={handleChange} />
+          <GuardianInformation formData={formData} handleChange={handleChange} />
+          <div className="flex justify-center items-center mt-6">
+            <button
+              type="submit"
+              className="py-2 px-4 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
+              Submit Application
+            </button>
           </div>
         </form>
       </div>
@@ -221,4 +190,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default RegistrationPage;
