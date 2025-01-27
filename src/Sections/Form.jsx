@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PersonalInformation = ({ formData, handleChange }) => (
+const Form = ({ formData, handleChange }) => (
   <div className="space-y-6">
     <h2 className="text-xl font-bold">Personal Information</h2>
     <div>
@@ -190,4 +190,4 @@ const RegistrationPage = () => {
   );
 };
 
-export default RegistrationPage;
+export default Form;
