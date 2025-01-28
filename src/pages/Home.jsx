@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from "../Sections/Nav"
 import ImageSlider from "../Sections/ImageSlider"
+import Services from '../Sections/Services'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
                 <button>Apply Now!</button>
             </a>
         </div>
+        <Services />
     </div>
   )
 }

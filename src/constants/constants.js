@@ -1,52 +1,27 @@
 import { label } from "framer-motion/client";
+import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
 
-export const Register = [
-    { label: "Surname", placeholder: "surname" },
-    { label: "First Name", placeholder: "First Name" },
-    { label: "Middle Name", placeholder: "Middle Name" },
-    { label: "Address", placeholder: "Residential Address" },
-    { label: "State of Origin", placeholder: "State of Origin" },
-    { label: "State of Resident", placeholder: "State of Resident" },
-    { label: "Local Government of Resident", placeholder: "LGA of Resident" },
-    { label: "Email Address", placeholder: "Enter your email" },
-    { label: "Phone No.", placeholder: "Phone No." },
-];
 
-export const Guardian = [
-    { label: "Guardian's Phone Number", placeholder: "Guardian's Phone Number" },
-    { label: "Guardian's Name", placeholder: "Guardian's Name" },
-    { label: "Guardian's Address", placeholder: "Guardian's Address" }
-];
 
-export const AcademicRecords = [
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""},
-    { label: "", placeholder: ""}
-]
-
-export const Login = [
-    { label: "Username", placeholder: "Enter Your Username" },
-    { label: "Password", placeholder: "Enter Your Password" },
-];
-
-export const shoes = [
+export const services = [
     {
-        thumbnail: thumbnailShoe1,
-        bigShoe: bigShoe1,
+        imgURL: truckFast,
+        label: "About Us",
+        subtext: "Enjoy seamless shopping with our complimentary shipping service."
     },
     {
-        thumbnail: thumbnailShoe2,
-        bigShoe: bigShoe2,
+        imgURL: shieldTick,
+        label: "Our Mission",
+        subtext: "Experience worry-free transactions with our secure payment options."
     },
     {
-        thumbnail: thumbnailShoe3,
-        bigShoe: bigShoe3,
+        imgURL: support,
+        label: "Our Vision",
+        subtext: "Our dedicated team is here to assist you every step of the way."
     },
 ];
+
+
+
+
+
