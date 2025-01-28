@@ -78,6 +78,23 @@ const PersonalInformation = ({ formData, handleChange }) => (
 
     <div>
       <label
+        htmlFor="paymentProof"
+        className="block text-sm font-medium text-gray-700"
+      >
+        Upload Payment Proof
+      </label>
+      <input
+        type="file"
+        name="paymentProof"
+        id="paymentProof"
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+
+    <div>
+      <label
         htmlFor="address"
         className="block text-sm font-medium text-gray-700"
       >
@@ -92,9 +109,7 @@ const PersonalInformation = ({ formData, handleChange }) => (
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         rows="3"
-      >
-        
-      </textarea>
+      ></textarea>
     </div>
 
     <div>
