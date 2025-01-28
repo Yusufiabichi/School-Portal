@@ -78,15 +78,15 @@ const PersonalInformation = ({ formData, handleChange }) => (
 
     <div>
       <label
-        htmlFor="paymentProof"
+        htmlFor="passport"
         className="block text-sm font-medium text-gray-700"
       >
-        Upload Payment Proof
+        Upload Passport photograph
       </label>
       <input
         type="file"
-        name="paymentProof"
-        id="paymentProof"
+        name="passport"
+        id="passport"
         onChange={handleChange}
         required
         className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -313,7 +313,10 @@ const RegistrationPage = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    dob: "",
     phoneNumber: "",
+    address: "",
+    passport: "",
     schoolName: "",
     graduationYear: "",
     ssceExam: "",
