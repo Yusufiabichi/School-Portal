@@ -49,7 +49,7 @@ const PersonalInformation = ({ formData, handleChange }) => (
         Phone Number
       </label>
       <input
-        placeholder="070XXXXXXXX"
+        placeholder="070XXXXXXX"
         type="tel"
         name="phoneNumber"
         id="phoneNumber"
