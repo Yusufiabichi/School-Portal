@@ -62,6 +62,40 @@ const PersonalInformation = ({ formData, handleChange }) => (
     </div>
 
     <div>
+      <label htmlFor="dob" className="block text-sm font-medium text-gray-700">
+        Date of Birth
+      </label>
+      <input
+        type="date"
+        name="dob"
+        id="dob"
+        value={formData.dob}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+
+    <div>
+      <label
+        htmlFor="address"
+        className="block text-sm font-medium text-gray-700"
+      >
+        Address
+      </label>
+      <textarea
+        placeholder="Enter your Address"
+        name="address"
+        id="address"
+        value={formData.address}
+        onChange={handleChange}
+        required
+        className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <div>
       <label
         htmlFor="courseOfInterest"
         className="block text-sm font-medium text-gray-700"
@@ -150,7 +184,10 @@ const AcademicRecords = ({ formData, handleChange }) => (
     </div>
 
     <div>
-      <label htmlFor="creditsScore" className="block text-sm font-medium text-gray-700">
+      <label
+        htmlFor="creditsScore"
+        className="block text-sm font-medium text-gray-700"
+      >
         No. of Credits/ Score
       </label>
       <input
