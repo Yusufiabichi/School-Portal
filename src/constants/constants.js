@@ -3,7 +3,7 @@ import { facebook, instagram, shieldTick, support, truckFast, twitter } from "..
 
 
 
-export const services = [
+export const aboutUs = [
     {
         imgURL: truckFast,
         label: "About Us",
@@ -25,27 +25,33 @@ export const courseList = [
     {
         course: "Midwifery",
         courseCode: "MW",
-        applicationFee: "12,000"
+        applicationFee: "12,000",
+        requirements: ""
     },
     {
         course: "Public Health",
         courseCode: "PH",
-        applicationFee: "12,000"
+        applicationFee: "12,000",
+        requirements: ""
+
     },
     {
         course: "CHEW",
         courseCode: "CW",
-        applicationFee: "12,000"
+        applicationFee: "12,000",
+        requirements: ""
     },
     {
         course: "Medical Lab",
         courseCode: "ML",
-        applicationFee: "12,000"
+        applicationFee: "12,000",
+        requirements: ""
     },
     {
         course: "Nursing Sciences",
         courseCode: "NS",
-        applicationFee: "12,000"
+        applicationFee: "12,000",
+        requirements: ""
     }
 ]
 
