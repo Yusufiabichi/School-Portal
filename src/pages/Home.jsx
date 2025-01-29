@@ -19,7 +19,7 @@ const Home = () => {
             </a>
         </div>
         <div>
-            <a href="/ApplicationPage">
+            <a href="/ApplyPage">
                 <button>Apply Now!</button>
             </a>
         </div>
