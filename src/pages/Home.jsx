@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from "../Sections/Nav"
 import ImageSlider from "../Sections/ImageSlider"
-import Services from '../Sections/Services'
+import AboutCard from "../Components/AboutCard"
 
 const Home = () => {
   return (
@@ -24,7 +24,7 @@ const Home = () => {
                 <button>Apply Now!</button>
             </a>
         </div>
-        <Services />
+        <About />
     </div>
   )
 }
