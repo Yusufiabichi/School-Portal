@@ -21,7 +21,7 @@ export const services = [
     },
 ];
 
-export const courses = [
+export const courseList = [
     {
         course: "Midwifery",
         courseCode: "MW",
@@ -29,7 +29,22 @@ export const courses = [
     },
     {
         course: "Public Health",
-        courseCode: "MW",
+        courseCode: "PH",
+        applicationFee: "12,000"
+    },
+    {
+        course: "CHEW",
+        courseCode: "CW",
+        applicationFee: "12,000"
+    },
+    {
+        course: "Medical Lab",
+        courseCode: "ML",
+        applicationFee: "12,000"
+    },
+    {
+        course: "Nursing Sciences",
+        courseCode: "NS",
         applicationFee: "12,000"
     }
 ]
