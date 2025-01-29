@@ -3,7 +3,7 @@ import { facebook, instagram, shieldTick, support, truckFast, twitter } from "..
 
 
 
-export const aboutUs = [
+export const SchoolInfo = [
     {
         imgURL: truckFast,
         label: "About Us",
