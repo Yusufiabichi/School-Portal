@@ -15,7 +15,7 @@ export default function ApplicationPage() {
           Apply now to join our institution and gain access to quality education.
           Fill out the application form to get started.
         </p>
-        <a href="./ApplicationPage">
+        <a href="/ApplicationPage.jsx">
           <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
             Apply
           </button>
