@@ -14,7 +14,7 @@ const Home = () => {
             </a>
         </div>
         <div>
-            <a href="/RegistrationPage">
+            <a href="/ApplicationPage">
                 <button>Register Now</button>
             </a>
         </div>
