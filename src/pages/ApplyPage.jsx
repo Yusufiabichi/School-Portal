@@ -1,4 +1,6 @@
-export default function ApplicationPage() {
+
+
+const ApplyPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
       {/* School Header */}
@@ -30,5 +32,7 @@ export default function ApplicationPage() {
         <p>✉️ info@school.com</p>
       </div>
     </div>
-  );
+  )
 }
+
+export default ApplyPage

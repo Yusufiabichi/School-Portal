@@ -14,12 +14,12 @@ const Home = () => {
             </a>
         </div>
         <div>
-            <a href="/ApplicationPage">
+            <a href="/RegistrationPage">
                 <button>Register Now</button>
             </a>
         </div>
         <div>
-            <a href="/ApplyPage">
+            <a href="/ApplicationPage">
                 <button>Apply Now!</button>
             </a>
         </div>
