@@ -4,7 +4,7 @@ export default function ApplicationPage() {
       {/* School Header */}
       <div className="text-center my-6">
         <img src="/school-logo.png" alt="School Logo" className="w-24 h-24 mx-auto" />
-        <h1 className="text-3xl font-bold text-gray-800 mt-2">Your School Name</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mt-2">X College</h1>
         <p className="text-lg text-gray-600 mt-1">Welcome to our Online Application Portal</p>
       </div>
       
